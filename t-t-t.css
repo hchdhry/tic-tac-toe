@@ -1,0 +1,16 @@
+.gameboard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: black solid;
+    outline: solid black;
+    height: 60vh;
+    width: 60%;
+}
+.cell{
+    height: calc(height/3);
+    width: 100%;
+    background-color: aqua;
+    outline: solid black;
+ 
+}
