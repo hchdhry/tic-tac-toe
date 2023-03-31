@@ -2,6 +2,8 @@ const cell=document.querySelectorAll(".cell")
 
 const gameboard={
     board: Array(9).fill(''),    
+  
+    
   }
  
   const player=(symbol,value)=>{
@@ -9,17 +11,17 @@ const gameboard={
       gameboard.board[index]= player
 
     }
-   function yee(){ 
+   const yee = (player) =>{
     cell.forEach((div) => {
   div.addEventListener('click', () => {
-        console.log(div.id);
+        div.innerHTML=player.symbol
       });
     });
-  }
+   }
 
     return{symbol,value,populate,yee}
   }
 
   const playerone = player("x",1)
   const playertwo = player("o",2)
-playerone.yee()
+playerone.yee(playerone)
